@@ -8,7 +8,7 @@ Dominant DEX also mitigates spoofing and some other challenges with current DEX 
 
 This is a quick, informal description which assumes a regular order book and matching engine.
 
-1. Add / configure the following on top of a regular order book based DEX:
+**Add / configure the following on top of a regular order book based DEX**
 1. All order fees are sent to a “Fee Pool”.  There is one Fee Pool per order book.
 1. Limit orders can optionally include a timestamp denoting a future time instant.  If set, the order cannot be cancelled until this future time.
 1. Maker fees are defined by a continuous function which is not only proportional to the order amount, but also inversely proportional to:
@@ -27,7 +27,7 @@ Time locked liquidity cannot be spoofed.
 
 This could create a market that both makers and takers prefer over a zero-fee regular DEX.  A key assumption is that liquidity is often the most important factor for market participants - especially larger ones - often triumphing centralized counterparty risk and considerable trade fees (e.g. 0.3%).  Takers that are currently accepting industry standard fees would presumably do so in a Dominant DEX that gives them access to more reliable and predictable liquidity.
 
-Open questions include:
+**Open questions include**
 1. Should the inverse proportional factors in the maker fee function (duration of time locks and proximity to bid-ask spread) be linear, quadratic, etc?
 1. What is a meaningful maximum time lock period?  True hodlers would surely prefer infinite lockup, but that would also give a negligible fee decrease compared to e.g.  1y lockup.
 1. What is the best way to compute a new order’s proximity to the bid-ask spread?
